@@ -1,17 +1,6 @@
--- =============================================
--- DATABASE: qlsuachua
--- Đã sửa để import được vào MySQL
--- =============================================
+CREATE DATABASE `qlsc thietbi`;
+USE `qlsc thietbi`;
 
-DROP DATABASE IF EXISTS qlsuachua;
-CREATE DATABASE qlsuachua
-    CHARACTER SET utf8mb4
-    COLLATE utf8mb4_unicode_ci;
-USE qlsuachua;
-
--- =============================================
--- BẢNG NGƯỜI DÙNG
--- =============================================
 CREATE TABLE nguoidung (
     ma_nguoidung INT AUTO_INCREMENT PRIMARY KEY,
     ten_dangnhap VARCHAR(50) NOT NULL,
@@ -30,9 +19,6 @@ INSERT INTO nguoidung (ma_nguoidung, ten_dangnhap, mat_khau, ho_ten, so_dien_tho
 (6, 'hoangtung', '123456', 'Hoàng Thanh Tùng', '0966111222', 'khach_hang'),
 (7, 'minhphuong', '123456', 'Vũ Minh Phương', '0933444555', 'khach_hang');
 
--- =============================================
--- BẢNG DANH MỤC THIẾT BỊ
--- =============================================
 CREATE TABLE danhmucthietbi (
     ma_danhmuc INT AUTO_INCREMENT PRIMARY KEY,
     ten_danhmuc VARCHAR(100) NOT NULL,
@@ -45,9 +31,6 @@ INSERT INTO danhmucthietbi (ma_danhmuc, ten_danhmuc, mo_ta) VALUES
 (3, 'Máy giặt', 'Sửa máy giặt không vắt, không cấp nước'),
 (4, 'Bình nóng lạnh', 'Bảo dưỡng và sửa chữa bình nước nóng');
 
--- =============================================
--- BẢNG PHIẾU SỬA CHỮA
--- =============================================
 CREATE TABLE phieusuachua (
     ma_phieu INT AUTO_INCREMENT PRIMARY KEY,
     ma_khachhang INT NOT NULL,
@@ -68,9 +51,6 @@ INSERT INTO phieusuachua (ma_phieu, ma_khachhang, ma_thosua, ma_danhmuc, ten_thi
 (3, 6, 3, 3, 'Máy giặt LG cửa ngang 9kg', 'Báo lỗi LE, không vắt được nước', 'Số 120, Hai Bà Trưng, Hà Nội', 'hoan_thanh'),
 (4, 7, 2, 4, 'Bình nóng lạnh Ariston 30L', 'Bật không lên đèn, nước không nóng', 'Số 55, Thanh Xuân, Hà Nội', 'hoan_thanh');
 
--- =============================================
--- BẢNG HÓA ĐƠN
--- =============================================
 CREATE TABLE hoadon (
     ma_hoadon INT AUTO_INCREMENT PRIMARY KEY,
     ma_phieu INT NOT NULL,
@@ -85,10 +65,6 @@ INSERT INTO hoadon (ma_hoadon, ma_phieu, tong_tien, phuong_thuc_tt, trang_thai_t
 (2, 3, 650000.00, 'Tiền mặt', 'da_tra'),
 (3, 4, 300000.00, 'Chuyển khoản', 'da_tra');
 
--- =============================================
--- BẢNG THÀNH VIÊN NHÓM
--- (đã sửa: vai_tro_trong_nhóm -> vai_tro_trong_nhom)
--- =============================================
 CREATE TABLE thanhviennhom (
     id INT AUTO_INCREMENT PRIMARY KEY,
     ma_sinh_vien VARCHAR(20) NOT NULL,
