@@ -98,7 +98,7 @@ DB_NAME=qlsc thietbi
      ```bat
      mysql -u root -p < db.sql
      ```
-3. Database `qlsuachua` sẽ được tạo kèm dữ liệu mẫu.
+3. Database `qlsc thietbi` sẽ được tạo kèm dữ liệu mẫu.
 
 ## Endpoint
 
