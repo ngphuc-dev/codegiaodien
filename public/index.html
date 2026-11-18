@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QL Sửa chữa - Quản lý</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>QL Sửa chữa</h2>
+      <nav>
+        <button class="nav-btn active" data-view="nguoidung">Người dùng</button>
+        <button class="nav-btn" data-view="danhmucthietbi">Danh mục thiết bị</button>
+        <button class="nav-btn" data-view="phieusuachua">Phiếu sửa chữa</button>
+        <button class="nav-btn" data-view="hoadon">Hóa đơn</button>
+        <button class="nav-btn" data-view="thanhviennhom">Thành viên nhóm</button>
+      </nav>
+      <div class="status" id="status">Đang kết nối...</div>
+    </aside>
+    <main class="content">
+      <header class="toolbar">
+        <h1 id="title">Người dùng</h1>
+        <button id="addBtn" class="btn primary">+ Thêm mới</button>
+      </header>
+      <div id="tableWrap" class="table-wrap"></div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h3 id="modalTitle">Thêm mới</h3>
+      <form id="form"></form>
+      <div class="modal-actions">
+        <button type="button" id="cancelBtn" class="btn">Hủy</button>
+        <button type="button" id="saveBtn" class="btn primary">Lưu</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
