@@ -84,7 +84,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=
-DB_NAME=qlsuachua
+DB_NAME=qlsc thietbi
 ```
 
 - Trên **Windows với XAMPP**, cổng MySQL thường là `3306`. Nếu bạn dùng cổng khác (ví dụ XAMPP cấu hình `3307`), hãy sửa `DB_PORT` tương ứng.
