@@ -102,7 +102,7 @@ DB_NAME=qlsc thietbi
 
 ## Endpoint
 
-| Method | URL | Mô tả |
+| Method | URL  | Mô tả |
 |---|---|---|
 | GET | /health | Kiểm tra kết nối DB |
 | GET | /api/nguoidung | Danh sách người dùng |
